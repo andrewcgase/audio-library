@@ -34,3 +34,16 @@ body {
     float: left;
     margin: 2%;
 }
+
+.img-container{
+  height:60%;
+  overflow:hidden;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+img{
+  min-width: 100%;
+}

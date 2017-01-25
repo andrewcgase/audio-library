@@ -14,7 +14,7 @@ function ItunesController(){
       var song = songList[i]
       
       template += `<div class='col-sm-4'><div class='song'>${song.title}, ${song.collection}, $${song.price}, <audio controls
-  src='${song.preview}'></audio>, <img src='${song.albumArt}'> </div></div>`
+  src='${song.preview}'></audio>, <div class='img-container'><img src='${song.albumArt}'></div> </div></div>`
     }
 
       template+=`</div></div>`
