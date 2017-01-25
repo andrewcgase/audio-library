@@ -17,7 +17,8 @@ function ItunesController(){
   src='${song.preview}'></audio>, <img src='${song.albumArt}'> </li>`
       template+=`</ul>`
       document.getElementById('songs').innerHTML =template
-    }
+    }asdasd
+    
     
     
     console.log(songList);
