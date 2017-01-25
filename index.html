@@ -10,16 +10,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-sm-offset-2">
-                <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
-                    <div class="form-group center">
+            <div class="col-sm-6">
+                <form class="form-inline center top" onsubmit="itunesCtrl.getMusic(event)">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-                        <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                        <button type="submit" class="btn btn-success" id="get-music-button">Get Music</button>
                     </div>
                 </form>
 
             </div>
-            <div class="col-sm-4 topColor">
+            <div class="col-sm-6 topColor">
                 <h2 class='top'>OrangeString music service</h2>
             </div>
         </div>
@@ -28,6 +28,7 @@
 
 
             </div>
+             
         </div>
     </div>
 
@@ -38,6 +39,23 @@
 
 <script src="itunes-service.js"></script>
 <script src="app.js"></script>
+<script>
+   function onlyPlayOneIn(container) {
+  container.addEventListener("play", function(event) {
+  audio_elements = container.getElementsByTagName("audio")
+    for(i=0; i < audio_elements.length; i++) {
+      audio_element = audio_elements[i];
+      if (audio_element !== event.target) {
+        audio_element.pause();
+      }
+    }
+  }, true);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  onlyPlayOneIn(document.body);
+});
+</script>
 </body>
 
 </html>

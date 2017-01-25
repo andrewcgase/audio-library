@@ -13,14 +13,16 @@ function ItunesController(){
     for(var i = 0; i < songList.length; i++){
       var song = songList[i]
       
-      template += `<div class='col-sm-4'><div class='song'>${song.title}, ${song.collection}, $${song.price}, <audio controls
-  src='${song.preview}'></audio>, <div class='img-container'><img src='${song.albumArt}'></div> </div></div>`
+      template += `<div class='col-sm-4'><div class='song card'> <span class='iwt'><audio id='song${i}' src='${song.preview}'></audio><button onclick='document.getElementById("song${i}").play()'><span class='glyphicon glyphicon-play'></span></button><span><b>Title: ${song.title}</b></span></span><span>Album: ${song.collection}</span><span>Price: $${song.price}</span><div class='img-container'><img src='${song.albumArt}'></div> </div></div>`
     }
 
       template+=`</div></div>`
       document.getElementById('songs').innerHTML =template
     
-    
+//     <audio id="demo" src="http://tiedostot.wikidot.com/local--files/start/a-molli2.wav" type="audio/wav"></audio>
+// <div>
+//   <button onclick="document.getElementById('demo').play()">A minor triad</button>
+// </div>
 
     // This is where you task begins
     
