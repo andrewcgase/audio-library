@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.topColor {
+    border-radius: 20%;
+    background-color: darkslategray;
+    border:3px solid floralwhite;
+}
+
+.top {
+    margin: auto;
+    width:50%;
+    padding: 7px;
+    text-align:center;
+}
+
+.center {
+    padding:70 px 0;
+    text-align:center;
+}
+
+.song{
+    height: 30%;
+    width: 100%;
+    border: 5px solid ghostwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    float: left;
+    margin: 2%;
+}

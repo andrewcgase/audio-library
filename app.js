@@ -9,19 +9,19 @@ function ItunesController(){
 
   function drawSongs(songList){
     
-    var template = `<div class=><h2>Showing ${songList.length} results for <i>${songList[0].artist}</i></h2><ul>`
+    var template = `<div class='container'><div class='row'><div class='col-sm-12'><h2 class='center'>Showing ${songList.length} results for <i>${songList[0].artist}</i></h2></div></div><div class='row'>`
     for(var i = 0; i < songList.length; i++){
       var song = songList[i]
       
-      template += `<li>${song.title}, ${song.collection}, $${song.price}, <audio controls
-  src='${song.preview}'></audio>, <img src='${song.albumArt}'> </li>`
-      template+=`</ul>`
-      document.getElementById('songs').innerHTML =template
+      template += `<div class='col-sm-4'><div class='song'>${song.title}, ${song.collection}, $${song.price}, <audio controls
+  src='${song.preview}'></audio>, <img src='${song.albumArt}'> </div></div>`
     }
 
+      template+=`</div></div>`
+      document.getElementById('songs').innerHTML =template
     
     
-    console.log(songList);
+
     // This is where you task begins
     
  

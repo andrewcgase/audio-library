@@ -1,26 +1,43 @@
 <html>
-  <head>
+
+<head>
     <title>Itunes</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-  </head>
-  <body>
-    
-      <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-          <input type="text" class="form-control" name="artist" placeholder="Artist Name"/>
-          <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+                <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
+                    <div class="form-group center">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                        <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-sm-4 topColor">
+                <h2 class='top'>OrangeString music service</h2>
+            </div>
         </div>
-      </form>
-    
-        <div id="songs">
-          
-          
+        <div class="row">
+            <div class="col-sm-3">
+
+
+            </div>
         </div>
-    <script src="itunes-service.js"></script>
-    <script src="app.js"></script>
+    </div>
+
+
+    <div id="songs">
+
+    </div>
+
+<script src="itunes-service.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
